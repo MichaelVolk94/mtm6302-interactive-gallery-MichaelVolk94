@@ -10,32 +10,36 @@ html {
 
 h1 {
     text-align: center;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 #pictures {
     display: grid;
-    flex-wrap: wrap;
-    gap: 16px;/*Adjust the gap as needed, not done */
-    flex-direction: column;
+    gap: 16px; /* Adjust the gap as needed */
     justify-content: center;
-    columns: 3;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(1fr 1fr 1fr); /* Default to 3 columns */
 }
 
 p {
     border: 1px solid;
     text-align: center;
     margin: 0;
-    flex-direction: column;
+    padding-bottom: 16px; /* Add padding only to the bottom */
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     justify-content: center;
     display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 img {
     max-width: 100%;
-    margin: auto;
+    margin: 0; /* Remove any default margin */
+    padding: 0; /* Ensure no padding */
+}
+
+p > img {
+    margin-bottom: 1px; /* Increase space between the image and the text below */
 }
 
 div {
@@ -43,4 +47,67 @@ div {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #pictures {
+        grid-template-columns: 1fr; /* Change to 1 column on small screens */
+    }
+}html {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+h1 {
+    text-align: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#pictures {
+    display: grid;
+    gap: 16px; /* Adjust the gap as needed */
+    justify-content: center;
+    grid-template-columns: repeat(3, 1fr); /* Default to 3 columns */
+}
+
+p {
+    border: 1px solid;
+    text-align: center;
+    margin: 0;
+    padding-bottom: 16px; /* Add padding only to the bottom */
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+img {
+    max-width: 100%;
+    margin: 0; /* Remove any default margin */
+    padding: 0; /* Ensure no padding */
+}
+
+p > img {
+    margin-bottom: 8px; /* Increase space between the image and the text below */
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #pictures {
+        grid-template-columns: 1fr; /* Change to 1 column on small screens */
+    }
 }
