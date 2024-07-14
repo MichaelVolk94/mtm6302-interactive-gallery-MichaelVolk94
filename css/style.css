@@ -39,7 +39,7 @@ img {
 }
 
 p > img {
-    margin-bottom: 1px; /* Increase space between the image and the text below */
+    margin-bottom: 3px; /* Increase space between the image and the text below */
 }
 
 div {
